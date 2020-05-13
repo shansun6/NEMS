@@ -509,7 +509,8 @@ def decide_project_hera():
 #   except(EnvironmentError,ExitStatusException) as ee:
 #       logger.warning('Cannot run account_params: '+str(ee))
 #       logger.warning('Will use project "nems" for cpu hours.')
-        return 'nems'
+#ssun   return 'nems'
+        return 'gsd-fv3-dev'
 #   default_project='nems'
 #   projects=list()
 #   projalloc=dict()
@@ -566,7 +567,8 @@ def decide_tmp_hera():
 #           '/scratch1/NCEPDEV/stmp4',
 #           '/scratch2/NCEPDEV/stmp1',
 #           '/scratch2/NCEPDEV/stmp3' ]
-    return '/scratch1/NCEPDEV/stmp2/'+username()+'/scrub'
+#ssun   return '/scratch1/NCEPDEV/stmp2/'+username()
+    return '/scratch2/BMC/gsd-fv3-dev/'+username()
 #   try:
 #       args=['-B', '1G', '--' ]
 #       args.extend(stmps)

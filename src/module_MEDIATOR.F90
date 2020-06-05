@@ -264,10 +264,10 @@ module module_MEDIATOR
   integer, parameter :: nx_med=400, ny_med=nx_med/2
   integer            :: dbug_flag = 5
   integer            :: restart_interval = 0
-  logical            :: statewrite_flag = .true.      ! diagnostics output, default
+  logical            :: statewrite_flag = .false.      ! diagnostics output, default
   logical            :: overwrite_flag = .true.       !
   logical            :: rhprint_flag = .false.        ! diagnostics output, default
-  logical            :: profile_memory = .true.       ! diagnostics output, default
+  logical            :: profile_memory = .false.       ! diagnostics output, default
   logical            :: coldstart = .false.           ! coldstart flag
   logical            :: maptest = .false.             ! maptest flag
   logical            :: atmocn_flux_from_atm = .true. ! where is atm/ocn flux computed
@@ -1041,7 +1041,7 @@ module module_MEDIATOR
                            convention="NUOPC", purpose="Instance", rc=rc)
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, line=__LINE__, file=__FILE__)) return
 
-    statewrite_flag = (trim(value)=="true")
+!   statewrite_flag = (trim(value)=="true")
     write(msgString,'(A,l6)') trim(subname)//' statewrite_flag = ',statewrite_flag
     call ESMF_LogWrite(trim(msgString), ESMF_LOGMSG_INFO, rc=dbrc)
 
@@ -1056,7 +1056,7 @@ module module_MEDIATOR
                            convention="NUOPC", purpose="Instance", rc=rc)
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, line=__LINE__, file=__FILE__)) return
 
-    rhprint_flag = (trim(value)=="true")
+!   rhprint_flag = (trim(value)=="true")
     write(msgString,'(A,l6)') trim(subname)//' rhprint_flag = ',rhprint_flag
     call ESMF_LogWrite(trim(msgString), ESMF_LOGMSG_INFO, rc=dbrc)
 

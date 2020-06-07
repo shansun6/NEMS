@@ -264,10 +264,10 @@ module module_MEDIATOR
   integer, parameter :: nx_med=400, ny_med=nx_med/2
   integer            :: dbug_flag = 5
   integer            :: restart_interval = 0
-  logical            :: statewrite_flag = .false.      ! diagnostics output, default
+  logical            :: statewrite_flag = .false.     ! diagnostics output, default
   logical            :: overwrite_flag = .true.       !
   logical            :: rhprint_flag = .false.        ! diagnostics output, default
-  logical            :: profile_memory = .false.       ! diagnostics output, default
+  logical            :: profile_memory = .false.      ! diagnostics output, default
   logical            :: coldstart = .false.           ! coldstart flag
   logical            :: maptest = .false.             ! maptest flag
   logical            :: atmocn_flux_from_atm = .true. ! where is atm/ocn flux computed
